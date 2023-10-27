@@ -32,3 +32,28 @@ function switchLink() {
     //lien.setAttribute('href', 'http://www.franceinfo.fr')
     lien.innerHTML = "consulter l'actualité"
 }
+
+
+var premierParagraphe = document.querySelector('p')
+premierParagraphe.style.fontStyle = 'italic'
+// console.log(premierParagraphe.classList);
+// console.log(premierParagraphe.className);
+// var classes = premierParagraphe.classList
+// classes.remove('rouge')
+// classes.add('bleu')
+// classes.replace('rouge', 'bleu')
+// classes.toggle('rouge')
+// classes.toggle('bleu')
+// console.log(classes.contains('rouge'));
+
+function switchColor() {
+    var paragraphes = document.getElementsByTagName('p')
+    for (const paragraphe of paragraphes) {
+        var classes = paragraphe.classList
+        if (classes.contains('rouge')) {
+            classes.replace('rouge', 'bleu')
+        } else {
+            classes.replace('bleu', 'rouge')
+        }
+    }
+}
